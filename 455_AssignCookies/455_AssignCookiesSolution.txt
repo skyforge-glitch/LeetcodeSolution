@@ -1,0 +1,7 @@
+Here, I followed certain steps -
+- sorted both the arrays
+- sorting was needed just to make sure less requirement is fulfilled with less resource
+- used m, n : just to not check the size of both given arrays
+- in while loop : incremented i (satisfied child count) if the child is satisfied.
+- otherwise wwe incremented the j (cookie count) whatsoever
+- returning the satisfied child count.
