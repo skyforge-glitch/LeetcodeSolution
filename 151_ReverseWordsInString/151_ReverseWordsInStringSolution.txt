@@ -1,0 +1,44 @@
+✅ Algorithm
+
+# Initialize
+
+- word = "" — to build the current word
+- words = [] — to store completed words
+- result = "" — final reversed string
+
+# Traverse each character in s:
+If character is not a space (c != ' ')
+→ append it to word
+
+Else (character is space)
+→ if word is non-empty:
+
+- push word into words
+- reset word = ""
+- After loop
+
+- If word is non-empty → push it (last word handling)
+- Build the reversed output
+- Iterate words from last to first
+- Append each to result
+
+- Add a space only when it's not the very last appended word
+
+🧠 Intuition
+
+# We manually extract words because the string may contain:
+- leading spaces
+- trailing spaces
+- multiple spaces in between
+- Every sequence of non-space characters is a word.
+- After collecting them in order, we simply reverse the order of words.
+- This gives the correct "sentence reversed" result without altering characters inside words.
+
+# ⏱ Complexity
+# Time Complexity: O(n)
+
+- Single pass to extract words
+- Single pass to rebuild the reversed string
+
+# Space Complexity: O(n)
+- Stores all words in an auxiliary vector
