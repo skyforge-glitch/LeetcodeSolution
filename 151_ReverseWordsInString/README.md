@@ -42,3 +42,27 @@ Else (character is space)
 
 # Space Complexity: O(n)
 - Stores all words in an auxiliary vector
+
+✅ O(1) Space Approach
+
+# We do everything inside the same string, no extra vector.
+
+# Steps (In-place):
+1. Remove leading, trailing, and extra spaces
+2. compact the string so words are separated by exactly one space.
+3. Reverse the entire string
+
+Example:
+"the sky is blue" → "eulb si yks eht"
+
+- Reverse each word individually
+- This fixes the word order while maintaining correct spelling.
+
+🧠 Why This Is O(1) Extra Space?
+
+- Everything is done inside the same string.
+- Only uses a few integer pointers.
+- No vector, no extra string array, no extra buffers.
+
+✔ Uses built-in reverse() which modifies in-place
+✔ Fully optimal for time and space
