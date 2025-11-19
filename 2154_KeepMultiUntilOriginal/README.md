@@ -43,7 +43,7 @@ Process:
 Output: 24
 
 🧑‍💻 C++ Solution
-class Solution {
+//class Solution {
 public:
     int findFinalValue(vector<int>& nums, int original) {
 
@@ -58,7 +58,7 @@ public:
         // Once original no longer appears in the set, return it
         return original;
     }
-};
+// };
 
 # ⏱️ Complexity Analysis
 # Operation	                        Complexity
