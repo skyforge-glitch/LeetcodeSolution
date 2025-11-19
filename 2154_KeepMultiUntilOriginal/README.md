@@ -42,8 +42,9 @@ Process:
 
 Output: 24
 
-🧑‍💻 C++ Solution
-//class Solution {
+# 🧑‍💻 C++ Solution
+```
+class Solution {
 public:
     int findFinalValue(vector<int>& nums, int original) {
 
@@ -58,9 +59,11 @@ public:
         // Once original no longer appears in the set, return it
         return original;
     }
-// };
+}; 
+```
 
 # ⏱️ Complexity Analysis
+
 # Operation	                        Complexity
 - Building hash set	                O(n)
 - Doubling loop	                    O(k), where k = number of doublings
