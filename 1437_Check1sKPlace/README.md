@@ -4,36 +4,32 @@
 You are given a binary array nums and an integer k.
 Your task is to determine whether every pair of consecutive 1s in the array is separated by at least k zeros.
 
-Formally, ```for every two indices i and j where nums[i] == nums[j] == 1 and i < j, we must have:
+Formally, for every two indices `i` and `j` where `nums[i] == nums[j] == 1` and `i < j`, we must have:
 
-j - i - 1 >= k
+```j - i - 1 >= k```
 
-✅ Approach: Zero Counter Method (Optimal)
+# ✅ Approach: Zero Counter Method (Optimal)
 
 We traverse the array while maintaining a counter of zeros since the last encountered 1.
 
 Key ideas:
 
-Initialize count = k so the first 1 is always allowed.
+- Initialize count = k so the first 1 is always allowed.
+- When encountering a 0, increase the counter.
+- When encountering a 1:
+- If count < k, the distance is invalid → return false.
+- Otherwise, reset count = 0.
 
-When encountering a 0, increase the counter.
+# Complexity:
 
-When encountering a 1:
+-  Time: O(n)
 
-If count < k, the distance is invalid → return false.
-
-Otherwise, reset count = 0.
-
-Complexity:
-
-Time: O(n)
-
-Space: O(1)
+- Space: O(1)
 
 This is one of the cleanest and most efficient solutions.
 
-🧩 Code Implementation
-class Solution {
+# 🧩 Code Implementation
+```class Solution {
 public:
     bool kLengthApart(vector<int>& nums, int k) {
         
@@ -62,7 +58,7 @@ public:
         // No spacing violations found
         return true;
     }
-};
+};```
 
 📌 Example
 Input:
@@ -71,7 +67,7 @@ nums = [1,0,0,0,1], k = 2
 Output:
 true
 
-Explanation:
+# Explanation:
 
 Distance between the two 1s is 3 indexes → 3 - 0 - 1 = 2 zeros → valid.
 
