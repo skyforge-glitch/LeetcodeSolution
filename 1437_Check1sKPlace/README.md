@@ -58,9 +58,10 @@ public:
         // No spacing violations found
         return true;
     }
-};```
+};
+```
 
-📌 Example
+# 📌 Example
 Input:
 nums = [1,0,0,0,1], k = 2
 
