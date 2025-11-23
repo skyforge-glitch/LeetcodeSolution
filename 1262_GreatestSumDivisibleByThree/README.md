@@ -18,66 +18,69 @@ nums = [3, 6, 5, 1, 8]
 
 **Output:**
 
-```18```
+```text
+18
+```
 
 
 **Explanation:**
-```
-Total sum = 3 + 6 + 5 + 1 + 8 = 23
 
-23 % 3 = 2 → not divisible by 3
+- Total sum = 3 + 6 + 5 + 1 + 8 = 23
+- 23 % 3 = 2 → not divisible by 3
+- Remove the smallest number(s) to fix remainder:
+    - Remove 5 (remainder 2) → 23 - 5 = 18
+- 18 % 3 = 0 → divisible
+- Maximum sum = 18
 
-Remove the smallest number(s) to fix remainder:
 
-Remove 5 (remainder 2) → 23 - 5 = 18
+## Example 2
 
-18 % 3 = 0 → divisible
+**Input:**
 
-Maximum sum = 18
-```
-
-Example 2
-
-Input:
-
+```text
 nums = [4]
+```
 
+**Output:**
 
-Output:
-
+```text
 0
+```
+
+**Explanation:**
+
+- Only number is 4 → 4 % 3 = 1 → not divisible
+- Cannot remove anything else → maximum divisible sum = 0
 
 
-Explanation:
+---
 
-Only number is 4 → 4 % 3 = 1 → not divisible
+## Approach 1: Greedy + Sorting (Simple Concept)
 
-Cannot remove anything else → maximum divisible sum = 0
+### Idea
 
-Approach 1: Greedy + Sorting (Simple Concept)
-Idea
+1. Calculate `total = sum(nums)`  
+2. Group numbers by remainder modulo 3:
 
-Calculate total = sum(nums)
+- `mod1` → numbers where x % 3 = 1  
+- `mod2` → numbers where x % 3 = 2  
 
-Group numbers by remainder modulo 3:
+3. If `total % 3 == 0` → already divisible → return total  
+4. Otherwise, remove the minimum necessary numbers to fix remainder:
 
-mod1 → numbers where x % 3 = 1
+| remainder | Option 1                  | Option 2                  |
+|-----------|---------------------------|---------------------------|
+| 1         | remove 1 smallest mod1    | remove 2 smallest mod2    |
+| 2         | remove 1 smallest mod2    | remove 2 smallest mod1    |
 
-mod2 → numbers where x % 3 = 2
+5. Pick the option with smallest sum removed  
+6. Subtract it from total → result
 
-If total % 3 == 0 → already divisible → return total
+---
 
-Otherwise, remove the minimum necessary numbers to fix remainder:
+### Code: Greedy + Sorting
 
-remainder	Option 1	Option 2
-1	remove 1 smallest mod1	remove 2 smallest mod2
-2	remove 1 smallest mod2	remove 2 smallest mod1
-
-Pick the option with smallest sum removed
-
-Subtract it from total → result
-
-Code: Greedy + Sorting
+```cpp
 #include <vector>
 #include <algorithm>
 #include <climits>
@@ -113,26 +116,39 @@ public:
         return total - min(rm1, rm2);
     }
 };
+```
 
-Time & Space Complexity
-Metric	Complexity
-Time	O(n log n) → due to sorting mod1 and mod2
-Space	O(n) → storing mod1 and mod2
-Approach 2: Dynamic Programming (Optimal)
-Idea
+## Time & Space Complexity
 
-Maintain 3 sums corresponding to remainder modulo 3:
+| Metric | Complexity |
+|--------|------------|
+| Time   | O(n log n) → due to sorting mod1 and mod2 |
+| Space  | O(n) → storing mod1 and mod2 |
+
+---
+
+## Approach 2: Dynamic Programming (Optimal)
+
+### Idea
+
+- Maintain 3 sums corresponding to remainder modulo 3:
+
+```python
 
 dp[0] = max sum divisible by 3
 dp[1] = max sum with remainder 1
 dp[2] = max sum with remainder 2
+```
 
 
-For each number x, try adding it to all current dp states and update the new sums.
+- For each number `x`, try adding it to all current dp states and update the new sums.  
+- At the end, `dp[0]` holds the maximum sum divisible by 3.
 
-At the end, dp[0] holds the maximum sum divisible by 3.
+---
 
-Code: DP Approach
+### Code: DP Approach
+
+```cpp
 #include <vector>
 #include <algorithm>
 using namespace std;
@@ -155,31 +171,33 @@ public:
         return dp[0];
     }
 };
+```
 
-Time & Space Complexity
-Metric	Complexity
-Time	O(n) → each number updates 3 states
-Space	O(1) → only 3 elements in dp array
-Why DP is Better
+## Time & Space Complexity
 
-No sorting needed
+| Metric | Complexity |
+|--------|------------|
+| Time   | O(n) → each number updates 3 states |
+| Space  | O(1) → only 3 elements in dp array |
 
-No conditional “remove smallest numbers”
+---
 
-Works for large arrays efficiently
+## Why DP is Better
 
-Clean and optimal solution
+- No sorting needed  
+- No conditional “remove smallest numbers”  
+- Works for large arrays efficiently  
+- Clean and optimal solution
 
-Key Takeaways
+---
 
-Modulo 3 arithmetic is the core.
+## Key Takeaways
 
-Two approaches:
+- Modulo 3 arithmetic is the core.  
+- Two approaches:  
+  - Greedy + Sorting → easy to understand  
+  - DP → optimal and elegant  
+- Use `INT_MAX` or a large number to safely handle impossible removal options.  
+- Always track remainder buckets or DP states to fix divisibility.
 
-Greedy + Sorting → easy to understand
-
-DP → optimal and elegant
-
-Use INT_MAX or a large number to safely handle impossible removal options.
-
-Always track remainder buckets or DP states to fix divisibility.
+---
