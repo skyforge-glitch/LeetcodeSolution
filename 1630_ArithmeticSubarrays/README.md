@@ -109,3 +109,5 @@ The sorting method above is the **best balance of clarity and performance**.
 - This problem tests understanding of arithmetic progression and subarray manipulation.
 - Sorting simplifies the logic and ensures clean, reliable code.
 - Only switch to the O(k) optimal method for extremely high constraints.
+
+---
