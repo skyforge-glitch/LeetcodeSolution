@@ -9,7 +9,7 @@ The goal of this repository is to maintain a clean, searchable, and well-organiz
 
 Each folder corresponds to a specific LeetCode problem using the pattern:
 
-```
+```text
 [ProblemNumber]_[ProblemTitle]
 ```
 
