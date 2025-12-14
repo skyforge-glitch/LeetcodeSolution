@@ -78,12 +78,13 @@ public:
 
 ------------------------------------------------------------------------
 
-# 📊 Complexity Analysis
+## 📊 Complexity Analysis
 
-  Metric                 Value
-  ---------------------- -------
-  **Time Complexity**    O(n)
-  **Space Complexity**   O(n)
+| **Metric**           | **Value** |
+|----------------------|-----------|
+| **Time Complexity**  | O(n)      |
+| **Space Complexity** | O(n)      |
+
 
 ------------------------------------------------------------------------
 
