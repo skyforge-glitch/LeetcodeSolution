@@ -30,3 +30,5 @@ public:
         return low;
     }
 };
+
+// 20min thinking , 20min coding , 5 min debugging
