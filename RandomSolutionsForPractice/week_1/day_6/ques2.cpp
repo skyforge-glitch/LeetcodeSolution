@@ -17,3 +17,5 @@ public:
         return nums[low];
     }
 };
+
+// took me around 15min in thinking and solving
