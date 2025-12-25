@@ -26,7 +26,7 @@ This project demonstrates **real-world frontend engineering practices**, includi
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 **Smart Task Manager** is a feature-rich to-do application that prioritizes:
 
