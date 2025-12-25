@@ -9,7 +9,7 @@ This project demonstrates **real-world frontend engineering practices**, includi
 
 ## 📌 Table of Contents
 
-1. [🚀 Project Overview](#project-overview)
+1. [Project Overview](#project-overview)
 2. [Live Features](#live-features)
 3. [UX & Design Philosophy](#ux--design-philosophy)
 4. [Project Structure](#project-structure)
@@ -26,7 +26,7 @@ This project demonstrates **real-world frontend engineering practices**, includi
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 **Smart Task Manager** is a feature-rich to-do application that prioritizes:
 
@@ -39,7 +39,7 @@ It is **not a beginner CRUD app** — instead, it showcases how a real-world app
 
 ---
 
-## ✨ Live Features
+## Live Features
 
 ### 🟢 Task Creation
 - Add tasks using button click or `Enter` key
@@ -71,7 +71,7 @@ It is **not a beginner CRUD app** — instead, it showcases how a real-world app
 
 ---
 
-## 🎨 UX & Design Philosophy
+## UX & Design Philosophy
 
 This app follows **real product UX rules**:
 
@@ -85,7 +85,7 @@ Animations are **intentional**, not decorative.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 ├── index.html      # App structure
@@ -96,7 +96,7 @@ Animations are **intentional**, not decorative.
 
 ---
 
-## ⚙️ Core Functionalities Explained
+## Core Functionalities Explained
 
 ### ➕ Add Task Flow
 1. User types task
@@ -128,7 +128,7 @@ Animations are **intentional**, not decorative.
 
 ---
 
-## 🎞 Animation Architecture (Important)
+## Animation Architecture (Important)
 
 **Problem Solved:**  
 Preventing full list animation on every re-render.
@@ -144,7 +144,7 @@ This mirrors **React-style diffing behavior**, achieved manually.
 
 ---
 
-## 💾 Data Persistence
+## Data Persistence
 
 - Uses browser `localStorage`
 - Stores complete task objects
@@ -153,7 +153,7 @@ This mirrors **React-style diffing behavior**, achieved manually.
 
 ---
 
-## 🧪 Edge Cases Handled
+## Edge Cases Handled
 
 ✔ Empty input submission  
 ✔ Rapid add/delete actions  
@@ -164,7 +164,7 @@ This mirrors **React-style diffing behavior**, achieved manually.
 
 ---
 
-## ▶ Installation & Usage
+## Installation & Usage
 
 ### Option 1: Local Run
 ```bash
@@ -180,7 +180,7 @@ No build steps. No dependencies.
 
 ---
 
-## 🛠 Technology Stack
+## Technology Stack
 
 | Layer        | Tech Used              |
 |-------------|------------------------|
@@ -192,7 +192,7 @@ No build steps. No dependencies.
 
 ---
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - 🔃 Drag & reorder tasks
 - 🌙 Dark mode (system-aware)
@@ -202,7 +202,7 @@ No build steps. No dependencies.
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
@@ -214,7 +214,7 @@ This project demonstrates:
 
 ---
 
-## 📄 License
+## License
 
 This project is open-source and free to use for learning and portfolio purposes.
 
