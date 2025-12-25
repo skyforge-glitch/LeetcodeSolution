@@ -9,7 +9,7 @@ This project demonstrates **real-world frontend engineering practices**, includi
 
 ## 📌 Table of Contents
 
-1. [Project Overview](#project-overview)
+1. [🚀 Project Overview](#project-overview)
 2. [Live Features](#live-features)
 3. [UX & Design Philosophy](#ux--design-philosophy)
 4. [Project Structure](#project-structure)
@@ -26,7 +26,7 @@ This project demonstrates **real-world frontend engineering practices**, includi
 
 ---
 
-## Project Overview
+## 🚀 Project Overview
 
 **Smart Task Manager** is a feature-rich to-do application that prioritizes:
 
