@@ -226,3 +226,5 @@ This project is open-source and free to use for learning and portfolio purposes.
 > Clean thinking + Vanilla JS can still build production-quality interfaces.
 
 Built with ❤️ and discipline.
+
+---
