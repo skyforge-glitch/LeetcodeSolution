@@ -26,6 +26,7 @@ function addTask() {
     tasks.push(newTask);
     lastAddedId = newTask.taskId;
     saveAndRender();
+    
     taskInput.value = '';
     taskInput.focus();
 
